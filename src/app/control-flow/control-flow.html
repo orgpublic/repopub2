@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-12">
+    <h3>Control Flow</h3>
+    <p>This is a simple control flow example.</p>
+  </div>
+</div>
+<div class="row">
+  @if (isTrue) {
+    <div class="col-2">This is if example</div>
+  } @else {
+    <div class="col-2">This is else example</div>
+  }
+</div>
+<div class="row">
+  <div class="col-2">
+    Toggle :
+    <input type="checkbox" [checked]="isTrue" (change)="isTrue = !isTrue" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-2">
+    <button [ngClass]="btnClass" class="mt-2">This is button with class</button>
+    <div [ngStyle]="style" style="margin-top: 4px">This is div with style</div>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-4">
+    <p>{{ valueFromSignal() }}</p>
+    <p>{{ value }}</p>
+  </div>
+  <div class="col-4">
+    <p><button ngClass="btn btn-success" (click)="valueFromSignal.set('Value changed from signal')">
+      Change Signal Value
+    </button></p>
+    <p>
+    <button ngClass="btn btn-primary" (click)="value = 'Updated value from variable'">
+      Change Variable Value
+    </button>
+    </p>
+  </div>
+</div>
