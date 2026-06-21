@@ -4,7 +4,7 @@ import { Admin } from './components/admin/admin';
 import { User } from './components/user/user';
 import { NgIf } from './components/ng-if/ng-if';
 import { NgFor } from './components/ng-for/ng-for';
-import { ControlFlow } from './control-flow/control-flow';
+import { ControlFlow } from './components/control-flow/control-flow';
 
 @Component({
   selector: 'app-root',
