@@ -1,0 +1,7 @@
+<div class="row mt-3">
+  <div *ngIf="isVisible" class="col-10 text-center" style="background-color: lightpink">ng-if works!</div>
+</div>
+<div class="row text-center mt-3">
+  <div class="col-1"><button (click)="show()" class="btn bg-success">Show</button></div>
+  <div class="col-1"><button (click)="hide()" class="btn bg-danger">Hide</button></div>
+</div>

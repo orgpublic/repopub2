@@ -1,0 +1,22 @@
+<h4>Template-form!</h4>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="row">
+  <div class="form-group col-2">
+    <label for="name">Name:</label>
+    <input #name="ngModel"  type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name" required>
+    @if(name.errors?.['required'] && name.touched){
+    <span class="text-danger">Name is required</span>
+    }
+  </div>
+  <div class="form-group col-2">
+    <label for="email">Email:</label>
+    <input #email="ngModel" type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+    @if(email.errors?.['required'] && email.touched){
+    <span class="text-danger">Email is required</span>
+    }
+  </div>
+  <div class="col-2 mt-4">
+  <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+</div>  
+</div>
+</form>     
