@@ -7,6 +7,7 @@ import { NgFor } from './components/ng-for/ng-for';
 import { ControlFlow } from './components/control-flow/control-flow';
 import { TemplateForm } from './components/template-form/template-form';
 import { ReactiveForm } from './components/reactive-form/reactive-form';
+import { ApiCall } from './components/api-call/api-call';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'admin', pathMatch: 'full' },
@@ -18,4 +19,5 @@ export const routes: Routes = [
   { path: 'control-flow', component: ControlFlow },
   { path: 'template-form', component: TemplateForm },
   { path: 'reactive-form', component: ReactiveForm },
+  { path: 'api-call', component: ApiCall },
 ];

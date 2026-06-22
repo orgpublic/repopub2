@@ -1,0 +1,19 @@
+<h4>API Call</h4>
+<p><button class="btn btn-primary" (click)="getUsers()">Get Users</button></p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>S.No.</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userList; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+    </tr>
+  </tbody>
